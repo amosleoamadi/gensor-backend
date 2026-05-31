@@ -9,11 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: [
-      "http://localhost:3000",
-      "http://localhost:5173",
-      "http://localhost:5174",
-    ],
+    origin: ["*"],
   }),
 );
 app.use("/api/users", require("./routes/user.route"));
